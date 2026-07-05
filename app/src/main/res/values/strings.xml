@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Phoenix</string>
+    <string name="height">Height</string>
+    <string name="minus">-</string>
+    <string name="speed">Speed</string>
+    <string name="plus">+</string>
+    <string name="radius">Radius</string>
+    <string name="range">Range</string>
+    <string name="distance">Distance</string>
+</resources>

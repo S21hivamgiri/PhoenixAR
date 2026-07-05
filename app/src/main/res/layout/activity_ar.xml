@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <io.github.sceneview.ar.ARSceneView
+        android:id="@+id/arSceneView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/frame"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="#10000000"
+        android:orientation="vertical"
+        android:paddingEnd="6dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/cameraIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnX"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                app:srcCompat="@drawable/range"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/btnXTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingEnd="10dp"
+                android:text="@string/range"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnXPlus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btnXMinus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/material_dynamic_tertiary40"
+                android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnZ"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                app:srcCompat="@drawable/modeling"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/btnZTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingEnd="10dp"
+                android:text="@string/distance"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnZPlus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/plus" />
+
+            <Button
+                android:id="@+id/btnZMinus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/material_dynamic_tertiary40"
+                android:text="@string/minus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnHeight"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                app:srcCompat="@drawable/height"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/heightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingEnd="10dp"
+                android:text="@string/height"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnHeightPlus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btnHeightMinus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/material_dynamic_tertiary40"
+                android:text="@string/minus" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnRadius"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                app:srcCompat="@drawable/radius"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/radiusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingEnd="10dp"
+                android:text="@string/radius"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnRadiusPlus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btnRadiusMinus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/material_dynamic_tertiary40"
+                android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnSpeed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                app:srcCompat="@drawable/speed"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/speedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingEnd="10dp"
+                android:text="@string/speed"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnSpeedPlus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/plus" />
+
+            <Button
+                android:id="@+id/btnSpeedMinus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/material_dynamic_tertiary40"
+                android:text="@string/minus" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cameraIcon"
+        android:layout_width="61dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        android:contentDescription="camera picture button"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="0dp"
+        app:fabCustomSize="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ar_camera"
+        app:tint="@color/white" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/settings"
+        android:layout_width="61dp"
+        android:layout_height="63dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="0dp"
+        app:fabCustomSize="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/arSceneView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/settings"
+        app:tint="@color/white" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/angle"
+        android:layout_width="61dp"
+        android:layout_height="63dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="0dp"
+        app:fabCustomSize="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/angle"
+        app:tint="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>
